@@ -1,52 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/custom.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Dropdown Navigation</title>
-</head>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Dropdown Navigation</title>
+  </head>
 
-<header>
-  <img src="./images/logo.svg" alt="Logo Snap">
-  
-  <nav>
-    <img src="./images/icon-menu.svg" alt="Icon menu mobile">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <div>
-      <button></button>
-      <button></button>
-    </div>
-  </nav>
-</header>
-
-<body>
-
-  <section class="container">
-    <div>
-      <img src="./images/image-hero-mobile.png" alt="Image d'intro">
-    </div>
-    <div>
-      <h1 class="h1">Make remote work</h1>
-      <p class="text-content">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-      <button class="button button-primary">Learn more</button>
-      <div class="client-box">
-        <img src="./images/client-databiz.svg" alt="Databiz logo">
-        <img src="./images/client-audiophile.svg" alt="Audiophile logo">
-        <img src="./images/client-meet.svg" alt="Meet logo">
-        <img src="./images/client-maker.svg" alt="Maker logo">
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="Logo Snap" />
+        </div>
+        <div class="nav">
+          <ul class="nav-item">
+            <li>
+              Features<span
+                ><img src="./images/icon-arrow-down.svg" alt=""
+              /></span>
+              <ul class="dropdown">
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img
+                        src="./images/icon-todo.svg"
+                        alt="Icon todo list" /></span
+                    >Todo List</a
+                  >
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="icon"
+                      ><img
+                        src="./images/icon-calendar.svg"
+                        alt="Icon calendar"
+                      /> </span
+                    >Calendar
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img
+                        src="./images/icon-reminders.svg"
+                        alt="Icon reminders" /></span
+                    >Reminders</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon"
+                      ><img
+                        src="./images/icon-planning.svg"
+                        alt="Icon planning" /></span
+                    >Planning</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              Company<span
+                ><img src="./images/icon-arrow-down.svg" alt=""
+              /></span>
+              <ul class="dropdown">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </li>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-  
-  
-</body>
+
+      <div class="nav-right">
+        <div class="connexion">
+          <button class="button button-secondary">Login</button>
+          <button class="button button-secondary">Register</button>
+        </div>
+        <div class="burger">
+          <img src="./images/icon-menu.svg" alt="Icon menu mobile" />
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <body>
+    <section class="container">
+      <div class="hero-img">
+        <picture>
+          <source
+            media="(max-width: 960px)"
+            srcset="./images/image-hero-mobile.png"
+          />
+          <source
+            media="(min-width: 960px)"
+            srcset="./images/image-hero-desktop.png"
+          />
+          <img src="./images/image-hero-mobile.png" alt="Image d'intro" />
+        </picture>
+      </div>
+      <div>
+        <h1 class="h1">Make <br class="visible" />remote work</h1>
+        <p class="text-content">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="button button-primary">Learn more</button>
+        <div class="client-box">
+          <img src="./images/client-databiz.svg" alt="Databiz logo" />
+          <img src="./images/client-audiophile.svg" alt="Audiophile logo" />
+          <img src="./images/client-meet.svg" alt="Meet logo" />
+          <img src="./images/client-maker.svg" alt="Maker logo" />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

@@ -13,22 +13,29 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <script src="./js/index.js" defer></script>
     <title>Frontend Mentor | Dropdown Navigation</title>
   </head>
 
-  <header>
-    <nav class="navbar">
-      <div class="nav-left">
-        <div class="logo">
-          <img src="./images/logo.svg" alt="Logo Snap" />
-        </div>
+  <header class="navbar">
+    <div class="logo">
+      <img src="./images/logo.svg" alt="Logo Snap" />
+    </div>
+    <div class="burger-icon">
+      <img src="./images/icon-menu.svg" alt="Icon menu mobile" />
+    </div>
+  </header>
+  <div class="menu-burger-overlay">
+    <div class="close-icon">
+      <img src="./images/icon-close-menu.svg" alt="Icon close mobile" />
+    </div>
+    <nav class="nav-container">
         <div class="nav">
           <ul class="nav-item">
-            <li>
-              Features<span
+            <li>Features<span
                 ><img src="./images/icon-arrow-down.svg" alt=""
               /></span>
-              <ul class="dropdown">
+              <ul class="sub-menu">
                 <li>
                   <a href="#"
                     ><span class="icon"
@@ -72,7 +79,7 @@
               Company<span
                 ><img src="./images/icon-arrow-down.svg" alt=""
               /></span>
-              <ul class="dropdown">
+              <ul class="sub-menu">
                 <li>History</li>
                 <li>Our Team</li>
                 <li>Blog</li>
@@ -82,19 +89,13 @@
             <li>About</li>
           </ul>
         </div>
-      </div>
-
-      <div class="nav-right">
         <div class="connexion">
           <button class="button button-secondary">Login</button>
           <button class="button button-secondary">Register</button>
         </div>
-        <div class="burger">
-          <img src="./images/icon-menu.svg" alt="Icon menu mobile" />
-        </div>
-      </div>
     </nav>
-  </header>
+  </div>
+  </div>
 
   <body>
     <section class="container">

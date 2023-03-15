@@ -43,9 +43,19 @@ body {
   border: 1px solid var(--black);
   color: var(--black);
 }
+.button-primary:hover {
+  background-color: transparent;
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+.button-secondary:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
 
 /* HEADER & NAV */
 .navbar {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,8 +161,36 @@ body {
   body {
     overflow: hidden;
   }
+  .burger-icon {
+    display: none;
+  }
+  .nav-container,
+  .nav-item,
+  .connexion {
+    flex-direction: row;
+  }
+  .nav-container {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-item {
+    padding-left: 5vw;
+  }
+  .nav-item > li {
+    position: relative;
+    padding: 20px 0;
+  }
   .nav-item > li:hover img {
     transform: rotate(180deg);
+  }
+  .nav-item > li:hover .sub-menu {
+    position: absolute;
+    width: max-content;
+    right: 0;
+    display: flex;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
   }
   .container {
     max-width: 1660px;
@@ -174,8 +212,5 @@ body {
   }
   .hero-img img {
     max-height: 720px;
-  }
-  .visible {
-    display: block;
   }
 }

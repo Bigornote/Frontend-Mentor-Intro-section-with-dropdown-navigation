@@ -2,6 +2,8 @@ const burgerIcon = document.querySelector(".burger-icon");
 const closeIcon = document.querySelector(".close-icon");
 const overlayMenu = document.querySelector(".menu-burger-overlay");
 const li = document.querySelectorAll(".nav-item li");
+const navContainer = document.querySelector(".nav-container");
+const navbar = document.querySelector(".navbar");
 
 const toggleOverlay = () => {
   burgerIcon.addEventListener("click", () => {
@@ -11,8 +13,6 @@ const toggleOverlay = () => {
     overlayMenu.classList.toggle("active");
   });
 };
-
-const rotateImg = () => {};
 
 const toggleSubnav = () => {
   li.forEach((parent) => {
@@ -25,12 +25,15 @@ const toggleSubnav = () => {
   });
 };
 
-toggleOverlay();
-toggleSubnav();
-
 const displayOverlay = () => {
-  if (window.innerWidth < 960) {
+  if (window.innerWidth > 960) {
+    navbar.appendChild(navContainer);
+  } else {
+    overlayMenu.appendChild(navContainer);
   }
 };
 
-window.addEventListener("DOMContentLoaded", displayOverlay);
+toggleOverlay();
+toggleSubnav();
+displayOverlay();
+window.addEventListener("resize", displayOverlay);
